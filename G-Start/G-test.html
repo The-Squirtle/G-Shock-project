@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+      /* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffffe1;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.logo img {
+  height: 50px;
+}
+
+.navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navigation li {
+  margin-left: 20px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.navigation a:hover {
+  color: #007bff;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search input[type="text"] {
+  padding: 5px 10px;
+  border: none;
+  border-bottom: 2px solid #007bff;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.search input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+
+.menu a:hover {
+  color: #007bff;
+}
+
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+}
+
+.navigation li {
+  margin-right: 20px;
+}
+
+.navigation li:last-child {
+  margin-right: 0;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+}
+
+.navigation a:hover {
+  color: #007bff;
+}
+
+/* Hero styles */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+}
+
+
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+}
+
+.button-primary {
+  background-color: #fff;
+  color: #007bff;
+  border: 2px solid #007bff;
+}
+
+.button-primary:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Features styles */
+.features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.feature {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.feature img {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.feature h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #212529;
+}
+
+.feature p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #6c757d;
+}
+
+.feature:hover img {
+  transform: scale(1.05);
+}
+
+.feature:hover h2 {
+  color: #007bff;
+}
+
+.feature:hover p {
+  color: #6c757d;
+}
+
+.feature img, .feature h2, .feature p {
+  transition: all 0.3s ease-in-out;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.feature {
+  flex: 0 0 calc(33.33% - 30px);
+  margin: 15px;
+  text-align: center;
+}
+
+.feature img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+/* Footer styles */
+.footer {
+  margin-top: 50px;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+}
+
+.footer p {
+  margin-bottom: 10px;
+}
+
+.footer-navigation ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+.footer-navigation li {
+  margin-right: 20px;
+}
+
+.footer-navigation li:last-child {
+  margin-right: 0;
+}
+
+.footer-navigation a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer-navigation a:hover {
+  color: #007bff;
+}
+
+.bn46 {
+  width: 110px;
+  height: 40px;
+}
+
+.bn45 {
+  width: 150px;
+  height: 40px;
+}
+
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="logo">
+          <img src="https://15.ie/wp-content/uploads/2018/03/G-Shock-logo.png" alt="Logo">
+        </div>
+        <nav class="navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="search">
+          <form action="#">
+            <input type="text" placeholder="Search...">
+            <button type="submit">Go</button>
+          </form>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+          </ul>
+        </div>
+      </header>
+      
+      <section class="hero">
+        <video autoplay loop muted playsinline>
+          <source src="https://cdn.dribbble.com/users/963024/screenshots/15567185/media/b6dd07dec6952d8cb3bf6d9b721b0eaa.mp4" type="video/mp4">
+          <source src="path/to/video.webm" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
+      </section>
+      
+      <section class="features">
+        <div class="feature">
+          <img src="https://gshock.casio.com/content/dam/casio/product-info/locales/intl/en/timepiece/product/watch/G/GA/GA2/ga-2100rgb-1a/assets/GA-2100RGB-1A.png.transform/product-panel/image.png" alt="Feature 1">
+          <h2>Feature 1</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim nunc a urna commodo.</p>
+        </div>
+        <div class="feature">
+          <img src="https://gshock.casio.com/content/dam/casio/product-info/locales/intl/en/timepiece/product/watch/G/GM/GM1/gm-110bb-1a/assets/GM-110BB-1A.png.transform/product-panel/image.png" alt="Feature 2">
+          <h2>Feature 2</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim nunc a urna commodo.</p>
+        </div>
+        <div class="feature">
+          <img src="https://gshock.casio.com/content/dam/casio/product-info/locales/intl/en/timepiece/product/watch/G/GA/GA1/ga-110gl-4a/assets/GA-110GL-4A.png.transform/product-panel/image.png" alt="Feature 3">
+          <h2>Feature 3</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim nunc a urna commodo.</p>
+        </div>
+        <div class="feature">
+          <img src="https://gshock.casio.com/content/dam/casio/product-info/locales/intl/en/timepiece/product/watch/G/GM/GMA/gma-s2100ga-7a/assets/GMA-S2100GA-7A.png.transform/product-panel/image.png" alt="Feature 4">
+          <h2>Feature 4</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim nunc a urna commodo.</p>
+        </div>
+        <div class="feature">
+          <img src="https://gshock.casio.com/content/dam/casio/product-info/locales/intl/en/timepiece/product/watch/G/GM/gmb/gm-b2100gd-9a/assets/GM-B2100GD-9A.png.transform/product-panel/image.png" alt="Feature 5">
+          <h2>Feature 5</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim nunc a urna commodo.</p>
+        </div>
+        <div class="feature">
+          <img src="https://gshock.casio.com/content/dam/casio/product-info/locales/intl/en/timepiece/product/watch/G/GA/GA1/ga-100rgb-1a/assets/GA-100RGB-1A.png.transform/product-panel/image.png" alt="Feature 6">
+          <h2>Feature 6</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim nunc a urna commodo.</p>
+        </div>
+      </section>
+      
+      <footer class="footer">
+        <div class="footer-content">
+          <p>&copy; 2023 My Website. All rights reserved.</p>
+          <nav class="footer-navigation">
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms and Conditions</a></li>
+              <li><a href="#">About Us</a></li>
+              <a href="/" tabIndex="0"><img class="bn46" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"alt="bn45"/></a>
+              &nbsp &nbsp
+              <a href="/" tabIndex="0"><img class="bn45" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png" alt="bn45"/></a>
+
+
+            </ul>
+          </nav>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
